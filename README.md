@@ -106,10 +106,10 @@ python src/braille_translate.py
 This project is licensed under the MIT License. See the LICENSE file for details.
 
 👨‍💻 Author
-Your Name
-Email: your.email@example.com
-LinkedIn: linkedin.com/in/yourprofile
-GitHub: github.com/yourusername
+Jyothir Raghavalu Bhogi
+📧 Email: jyothirraghavalu369@gmail.com
+🔗 LinkedIn: linkedin.com/in/jyothir-raghavalu-bhogi-059500252
+🌐 Portfolio: https://jyothir-369.github.io/BJR/
 
 📬 Contact
 For questions or collaboration inquiries, feel free to reach out via email or LinkedIn.
@@ -120,4 +120,4 @@ Edit
 
 ---
 
-Would you like me to generate this file and help push it to your GitHub repo?
+Let me know if you want me to generate a `requirements.txt` or `.gitignore` as well, or help you push all this to your GitHub repo.
