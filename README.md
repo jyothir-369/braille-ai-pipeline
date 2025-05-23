@@ -1,3 +1,90 @@
+{
+  "id": "page_001",
+  "language": "en",
+  "paragraphs": [
+    {"text": "Sample paragraph 1."},
+    {"text": "Sample paragraph 2."}
+  ]
+}
+4. Braille Translation
+Uses Liblouis to generate a parallel Braille corpus.
+Here are the issues causing this:
+
+The JSON block is opened with triple backticks (```json) but not properly closed before continuing to normal text.
+
+After the JSON block, the next lines (starting with 4. Braille Translation) are considered part of the JSON or code block because of missing closure.
+
+Also, the markdown parser expects consistent formatting, so mixing JSON with plain text without closing the code block breaks rendering.
+
+How to fix it:
+Make sure to close the JSON code block with triple backticks before continuing with the numbered list.
+
+For numbered lists and paragraphs, do not indent or place inside code blocks.
+
+Use triple backticks only around code snippets or blocks.
+
+Fixed snippet example:
+markdown
+Copy
+Edit
+### 3. **Structure**
+- Converts extracted text into structured JSON format:
+
+```json
+{
+  "id": "page_001",
+  "language": "en",
+  "paragraphs": [
+    {"text": "Sample paragraph 1."},
+    {"text": "Sample paragraph 2."}
+  ]
+}
+Braille Translation
+Uses Liblouis to generate a parallel Braille corpus.
+
+Supports both English and Hindi.
+
+Optional Annotation
+Manual or AI-assisted annotation for images, tables, or diagrams can be added as metadata.
+
+yaml
+Copy
+Edit
+
+Notice how:
+
+- The JSON block is wrapped between triple backticks ```json ... ```
+- After closing the JSON block, normal text continues outside any code block.
+
+---
+
+### Summary:
+
+Wherever you use code blocks (JSON, bash, yaml, etc.), always:
+
+- Open with ``` and optionally a language tag like ```json
+- Close with ```
+- Then write normal text **outside** those blocks
+
+---
+
+If you want, I can help you fix your entire markdown snippet to render perfectly! Would you like me to do that?
+
+
+
+
+
+
+You said:
+complete one
+
+
+ChatGPT said:
+Sure! Here’s your entire markdown content fixed so it renders properly without the red color or code formatting issues — with all code blocks correctly opened and closed, and normal text outside code blocks:
+
+markdown
+Copy
+Edit
 # 🧠 Braille AI Data Pipeline | Flickdone Assessment
 
 This repository contains the code and demo for a data engineering pipeline designed to convert unstructured text data into a structured, AI-trainable dataset for Braille translation. This was developed as part of the assessment task for the **Data Engineer (AI Data Specialist)** role at **Flickdone**.
@@ -29,6 +116,7 @@ Flickdone develops AI systems to make digital and printed content accessible to 
 
 ### 3. **Structure**
 - Converts extracted text into structured JSON format:
+
 ```json
 {
   "id": "page_001",
@@ -79,20 +167,20 @@ JSON: page_001.json
 Braille text: page_001.brf
 
 🚀 How to Run
-Clone the repository
+Clone the repository:
 
 bash
 Copy
 Edit
 git clone https://github.com/yourusername/braille-ai-pipeline.git
 cd braille-ai-pipeline
-Install dependencies
+Install dependencies:
 
 bash
 Copy
 Edit
 pip install -r requirements.txt
-Run the pipeline
+Run the pipeline step-by-step:
 
 bash
 Copy
@@ -114,10 +202,19 @@ Jyothir Raghavalu Bhogi
 📬 Contact
 For questions or collaboration inquiries, feel free to reach out via email or LinkedIn.
 
+Let me know if you want me to generate a requirements.txt or .gitignore file, or help you push all this to your GitHub repo.
+
 yaml
 Copy
 Edit
 
 ---
 
-Let me know if you want me to generate a `requirements.txt` or `.gitignore` as well, or help you push all this to your GitHub repo.
+This version:
+
+- Properly closes all code blocks (` ``` `) for JSON, bash, etc.
+- Ensures numbered and bullet lists are outside code blocks
+- Adds some section separators (`---`) for readability
+- Formats links properly with markdown syntax
+
+If you want, I can also help you generate example `requirements.txt` or `.gitignore` next!
