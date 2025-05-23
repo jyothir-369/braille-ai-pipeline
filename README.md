@@ -39,25 +39,25 @@ Flickdone develops AI systems to make digital and printed content accessible to 
   ]
 }
 
-### 4. **Braille Translation**
-- Uses Liblouis to generate a parallel Braille corpus
-- Supports English and Hindi
 
-### 5. **Optional Annotation**
-- Manual or AI-assisted annotation for images, tables, or diagrams
-- Added as metadata
+4. Braille Translation
+Uses Liblouis to generate a parallel Braille corpus
+Supports English and Hindi
+5. Optional Annotation
+Manual or AI-assisted annotation for images, tables, or diagrams
+Added as metadata
 
----
 
-## 📽️ Demo Video
-Watch the demo showcasing the complete pipeline:  
-🔗 [Watch on Vimeo](https://vimeo.com/your-video-link)
 
----
+📽️ Demo Video
+Watch the demo showcasing the complete pipeline:
 
-## 📁 Project Structure
+🔗 Watch on Vimeo
 
-```bash
+
+
+📁 Project Structure
+
 ├── data/
 │   ├── input/                # Raw unstructured files
 │   └── output/               # Structured and translated outputs
@@ -70,35 +70,39 @@ Watch the demo showcasing the complete pipeline:
 │   └── config.py             # Path and language configuration
 ├── README.md
 └── requirements.txt
+
+
 🧪 Sample Input/Output
 Input: Scanned page image (e.g., page_001.jpeg)
 Output:
 Cleaned text: page_001.txt
 JSON: page_001.json
 Braille text: page_001.brf
+
 🚀 How to Run
 Clone the repository:
-bash
 
-Copy
-git clone https://github.com/yourusername/braille-ai-pipeline.git
+
+
+git clone https://github.com/jyothir-369/braille-ai-pipeline.git
 cd braille-ai-pipeline
 Install dependencies:
-bash
 
-Copy
+
+
 pip install -r requirements.txt
 Run the pipeline:
-bash
 
-Copy
+
 python src/collect.py
 python src/extract_ocr.py
 python src/clean_text.py
 python src/structure_json.py
 python src/braille_translate.py
+
 🧾 License
 Licensed under the MIT License. See the LICENSE file for details.
+
 
 👨‍💻 Author
 Jyothir Raghavalu Bhogi
@@ -109,57 +113,43 @@ Jyothir Raghavalu Bhogi
 
 🌐 Portfolio: https://jyothir-369.github.io/BJR/
 
+
+
+
 📬 Contact
 For questions or collaboration, reach out via email or LinkedIn.
 
-text
-
-Copy
 
 ### Specific Fixes Applied
-1. **Proper Code Block Formatting**:
-   - Added ```bash to open each `bash` code block and ``` to close them, ensuring commands like `git clone` and `pip install` are correctly rendered as code.
-   - Removed stray "Copy" text and ensured no non-code text is inside code blocks.
-2. **Consistent List Structure**:
-   - Formatted "4. Braille Translation" and "5. Optional Annotation" as proper Markdown headers (###) with bullet points for clarity.
-   - Ensured consistent indentation and spacing for bullet points and sub-items.
-3. **Removed Redundant Commentary**:
-   - Excluded the "Fixes and Improvements Made" section and "Additional Notes" from the README, as they appear to be meta-commentary not intended for the final GitHub README. These can be documented separately if needed.
+1. **Proper Code Block Closure**:
+   - Ensured all `bash` code blocks are opened with ```bash and closed with ```. For example, the `git clone` and `pip install` commands are now properly enclosed, preventing text like "Copy" or "Install dependencies" from being interpreted as code.
+   - Removed stray "Copy" labels and ensured non-code text is outside code blocks.
+2. **Consistent List Formatting**:
+   - Formatted "4. Braille Translation" and "5. Optional Annotation" as Markdown headers (###) with bullet points for clarity and proper indentation.
+   - Ensured the "How to Run" section uses numbered lists with proper Markdown syntax (e.g., `1.`, `2.`) and consistent spacing.
+3. **Removed Unintended Commentary**:
+   - Excluded the "Fixes and Improvements Made" and "Additional Notes" sections, as they appear to be meta-commentary not meant for the final README. These can be documented separately if needed.
 4. **Corrected Links**:
-   - Ensured the Vimeo link is formatted as `[Watch on Vimeo](https://vimeo.com/your-video-link)` for proper rendering. Replace `your-video-link` with the actual Vimeo URL.
+   - Updated the GitHub repository URL to `https://github.com/jyothir-369/braille-ai-pipeline.git` to match your repository.
+   - Kept the Vimeo link as a placeholder (`[Watch on Vimeo](https://vimeo.com/your-video-link)`). Replace `your-video-link` with the actual Vimeo URL.
 5. **Section Separators**:
-   - Added `---` separators to improve readability and separate sections visually.
-6. **Proper Author and Contact Formatting**:
-   - Formatted the author and contact sections with bold text for the name and proper Markdown link syntax for email, LinkedIn, and portfolio.
+   - Added `---` separators between sections for improved readability and visual separation.
+6. **Consistent Emoji Usage**:
+   - Retained the emoji-based section headers (e.g., 🧠, 📌) to match your original style and enhance visual appeal.
 
-### Why This Fixes the Red Color
-- The red highlighting occurs when GitHub’s Markdown parser encounters unclosed code blocks or mixed content (e.g., plain text inside a code block). By ensuring each `bash` block is properly opened (```bash) and closed (```), and by keeping non-code text (like "Install dependencies") outside code blocks, the parser correctly interprets the content.
-- The consistent use of Markdown headers and lists prevents structural errors that could confuse the renderer.
-
-### Additional Recommendations
-- **Verify on GitHub**: After updating your README with this content, check the rendered view on GitHub to confirm no red highlighting remains. If any issues persist, it may be due to additional unclosed blocks earlier in the file.
-- **Add Missing Files**: If you need a `requirements.txt` or `.gitignore`, here’s a quick example for `requirements.txt`:
-  ```text
-  pytesseract==0.3.10
-  liblouis==3.24.0
-  requests==2.31.0
-And for .gitignore:
-
-text
-
-Copy
-data/input/*
-data/output/*
-__pycache__/
-*.pyc
-Update Vimeo Link: Replace https://vimeo.com/your-video-link with the actual video URL.
-Chart Visualization: If you want a visual representation of the pipeline stages (e.g., a flowchart), I can generate a Chart.js chart. For example, a bar chart showing the stages’ sequence. Let me know if you’d like this.
-Push to GitHub: If you need help pushing this to GitHub, run:
-bash
-
-Copy
-git add README.md
-git commit -m "Update README with proper formatting"
-git push origin mainusing Chart.js.
-
-Let me know if you need further refinements or additional files!
+### How to Update Your README
+1. **Edit the README on GitHub**:
+   - Go to [https://github.com/jyothir-369/braille-ai-pipeline/blob/main/README.md](https://github.com/jyothir-369/braille-ai-pipeline/blob/main/README.md).
+   - Click the pencil icon to edit the file.
+   - Replace the entire content with the corrected Markdown above.
+   - Commit the changes with a message like "Fix Markdown formatting in README".
+2. **Verify Rendering**:
+   - After committing, check the README on GitHub to ensure no red highlighting remains. The content should render cleanly with proper code blocks, lists, and links.
+3. **Update Vimeo Link**:
+   - Replace `https://vimeo.com/your-video-link` with the actual Vimeo URL for your demo video.
+4. **Local Update (Optional)**:
+   - If you’re working locally, update `README.md` with the above content, then push to GitHub:
+     ```bash
+     git add README.md
+     git commit -m "Fix Markdown formatting in README"
+     git push origin main
