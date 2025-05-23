@@ -29,16 +29,6 @@ Flickdone develops AI systems to make digital and printed content accessible to 
 ### 3. **Structure**
 - Converts extracted text into structured JSON format:
 
-```json
-{
-  "id": "page_001",
-  "language": "en",
-  "paragraphs": [
-    {"text": "Sample paragraph 1."},
-    {"text": "Sample paragraph 2."}
-  ]
-}
-
 
 4. Braille Translation
 Uses Liblouis to generate a parallel Braille corpus
