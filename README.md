@@ -28,28 +28,38 @@ Flickdone develops AI systems to make digital and printed content accessible to 
 - Text is normalized and cleaned using custom Python scripts.
 
 ### 3. **Structure**
+- Converts extracted text into structured JSON format:
 
-
+```json
+{
+  "id": "page_001",
+  "language": "en",
+  "paragraphs": [
+    {"text": "Sample paragraph 1."},
+    {"text": "Sample paragraph 2."}
+  ]
+}
 4. Braille Translation
 Uses Liblouis to generate a parallel Braille corpus.
 
 Supports both English and Hindi.
 
 5. Optional Annotation
-Manual or AI-assisted annotation for images, tables, or diagrams can be added as metadata.
+Manual or AI-assisted annotation for images, tables, or diagrams.
+
+Added as metadata to the structured JSON.
 
 📽️ Demo Video
 Watch the demo showcasing the complete pipeline:
-
 🔗 Watch on Vimeo
 
 📁 Project Structure
-bash
+graphql
 Copy
 Edit
 ├── data/
 │   ├── input/                # Raw unstructured files
-│   └── output/               # Final structured and translated outputs
+│   └── output/               # Structured and translated outputs
 ├── src/
 │   ├── collect.py            # Web scraping and document fetching
 │   ├── extract_ocr.py        # OCR extraction
@@ -60,32 +70,30 @@ Edit
 ├── README.md
 └── requirements.txt
 🧪 Sample Input/Output
-Input: Scanned page image (e.g., page_001.jpeg)
+Input:
+Scanned page image (e.g., page_001.jpeg)
 
 Output:
 
 Cleaned text: page_001.txt
 
-JSON: page_001.json
+JSON structured data: page_001.json
 
 Braille text: page_001.brf
 
 🚀 How to Run
-Clone the repository
-
+1. Clone the repository:
 bash
 Copy
 Edit
-git clone https://github.com/yourusername/braille-ai-pipeline.git
+git clone https://github.com/jyothir-369/braille-ai-pipeline.git
 cd braille-ai-pipeline
-Install dependencies
-
+2. Install dependencies:
 bash
 Copy
 Edit
 pip install -r requirements.txt
-Run the pipeline
-
+3. Run the pipeline:
 bash
 Copy
 Edit
@@ -112,4 +120,11 @@ Edit
 
 ---
 
-Let me know if you want me to generate a `requirements.txt` or `.gitignore` as well, or help you push all this to your GitHub repo.
+Let me know if you'd like this automatically pushed to your GitHub repo or need a `.gitignore` or `requirements.txt` generated as well.
+
+
+
+
+
+
+
