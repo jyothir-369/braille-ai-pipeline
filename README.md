@@ -15,6 +15,8 @@ Flickdone develops AI systems to make digital and printed content accessible to 
 
 ---
 
+
+
 ## 🛠️ Pipeline Stages
 
 ### 1. **Collect**
@@ -30,9 +32,13 @@ Flickdone develops AI systems to make digital and printed content accessible to 
 - Converts extracted text into structured JSON format:
 
 
+
+
 4. Braille Translation
 Uses Liblouis to generate a parallel Braille corpus
 Supports English and Hindi
+
+
 5. Optional Annotation
 Manual or AI-assisted annotation for images, tables, or diagrams
 Added as metadata
