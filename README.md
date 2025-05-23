@@ -1,58 +1,63 @@
 # 🧠 Braille AI Data Pipeline | Flickdone Assessment
 
-This repository contains the code and demo for a data engineering pipeline designed to convert unstructured text data into a structured, AI-trainable dataset for Braille translation.  
-Developed for the **Data Engineer (AI Data Specialist)** role at **Flickdone**.
+This repository contains the code and demo for a data engineering pipeline designed to convert unstructured text data into a structured, AI-trainable dataset for Braille translation. This was developed as part of the assessment task for the **Data Engineer (AI Data Specialist)** role at **Flickdone**.
 
 ---
 
 ## 📌 Overview
 
-Flickdone develops AI systems to make digital and printed content accessible to the visually impaired. This pipeline:
+Flickdone develops AI systems to make digital and printed content accessible to the visually impaired. This project simulates a real-world data pipeline that:
 
-- 📥 Collects unstructured text data (scanned pages, OCR-compatible images, or web content)  
-- 🔍 Extracts and cleans text using OCR tools (Tesseract & Vision-Language Models like Gemini or Qwen VL)  
-- 🧾 Structures output into JSON with paragraph-aligned content and metadata  
-- ♿ Translates text into Braille using Liblouis  
-- ✏️ (Optional) Annotates visual elements like tables or diagrams
+- Collects unstructured text data (scanned pages, OCR-compatible images, or web content)
+- Extracts and cleans text using OCR tools (Tesseract & Vision-Language Models like Gemini or Qwen VL)
+- Structures the output into JSON with paragraph-aligned content and metadata
+- Translates text into Braille using open-source libraries like **Liblouis**
+- (Optional) Annotates visual elements like tables or diagrams
 
 ---
 
 ## 🛠️ Pipeline Stages
 
-### 1. Collect  
-- Sources: Scanned pages and online text content  
-- Sample data stored in `data/`
+### 1. **Collect**
+- Sources include scanned pages and online text content.
+- Sample data is stored in `data/`.
 
-### 2. Extract and Clean  
-- Uses Tesseract OCR for basic extraction  
-- Supports advanced VLMs (e.g., Gemini/Qwen-VL)  
-- Normalizes and cleans text using custom Python scripts
+### 2. **Extract and Clean**
+- Uses `Tesseract OCR` for basic extraction.
+- Advanced VLM support (e.g., Gemini/Qwen-VL) is pluggable.
+- Text is normalized and cleaned using custom Python scripts.
 
-### 3. Structure  
+### 3. **Structure**
 - Converts extracted text into structured JSON format:
-
-
+```json
+{
+  "id": "page_001",
+  "language": "en",
+  "paragraphs": [
+    {"text": "Sample paragraph 1."},
+    {"text": "Sample paragraph 2."}
+  ]
+}
 4. Braille Translation
-Uses Liblouis to generate a parallel Braille corpus
+Uses Liblouis to generate a parallel Braille corpus.
 
-Supports English and Hindi
+Supports both English and Hindi.
 
 5. Optional Annotation
-Manual or AI-assisted annotation for images, tables, or diagrams
-
-Added as metadata
+Manual or AI-assisted annotation for images, tables, or diagrams can be added as metadata.
 
 📽️ Demo Video
-🎬 Watch the full demo showcasing the pipeline here:
+Watch the demo showcasing the complete pipeline:
+
 🔗 Watch on Vimeo
 
 📁 Project Structure
-graphql
+bash
 Copy
 Edit
 ├── data/
 │   ├── input/                # Raw unstructured files
-│   └── output/               # Structured and translated outputs
+│   └── output/               # Final structured and translated outputs
 ├── src/
 │   ├── collect.py            # Web scraping and document fetching
 │   ├── extract_ocr.py        # OCR extraction
@@ -63,8 +68,7 @@ Edit
 ├── README.md
 └── requirements.txt
 🧪 Sample Input/Output
-Input:
-Scanned page image (e.g., page_001.jpeg)
+Input: Scanned page image (e.g., page_001.jpeg)
 
 Output:
 
@@ -75,18 +79,21 @@ JSON: page_001.json
 Braille text: page_001.brf
 
 🚀 How to Run
-Clone the repository:
+Clone the repository
+
 bash
 Copy
 Edit
-git clone https://github.com/jyothir-369/braille-ai-pipeline.git
+git clone https://github.com/yourusername/braille-ai-pipeline.git
 cd braille-ai-pipeline
-Install dependencies:
+Install dependencies
+
 bash
 Copy
 Edit
 pip install -r requirements.txt
-Run the pipeline:
+Run the pipeline
+
 bash
 Copy
 Edit
@@ -96,16 +103,16 @@ python src/clean_text.py
 python src/structure_json.py
 python src/braille_translate.py
 🧾 License
-Licensed under the MIT License. See the LICENSE file for details.
+This project is licensed under the MIT License. See the LICENSE file for details.
 
 👨‍💻 Author
 Jyothir Raghavalu Bhogi
 📧 Email: jyothirraghavalu369@gmail.com
 🔗 LinkedIn: linkedin.com/in/jyothir-raghavalu-bhogi-059500252
-🌐 Portfolio: jyothir-369.github.io/BJR
+🌐 Portfolio: https://jyothir-369.github.io/BJR/
 
 📬 Contact
-For questions or collaboration, feel free to reach out via email or LinkedIn.
+For questions or collaboration inquiries, feel free to reach out via email or LinkedIn.
 
 yaml
 Copy
@@ -113,4 +120,4 @@ Edit
 
 ---
 
-✅ **Would you like me to save this as your `README.md` and help you commit and push it to your GitHub repo?**
+Let me know if you want me to generate a `requirements.txt` or `.gitignore` as well, or help you push all this to your GitHub repo.
