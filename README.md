@@ -1,95 +1,105 @@
-🧠 Braille AI Data Pipeline
-Convert Unstructured Text into Structured Braille Corpus
+# ✅ Rails TODO App – Simple Task Manager with CRUD
 
-A full-fledged data pipeline that transforms scanned or unstructured content into structured English and Hindi Braille using OCR, preprocessing, and Liblouis conversion.
+A minimalist and responsive TODO web application built with Ruby on Rails. It allows users to **create**, **read**, **update**, and **delete** tasks easily through a clean interface.
 
-🌐 Website
-Coming soon...
-Feel free to preview the project via the GitHub repository.
+---
 
-📌 Overview
-Braille AI Data Pipeline is designed to empower accessibility by transforming diverse content sources—such as scanned documents, PDFs, and web articles—into structured Braille format. The pipeline mimics a real-world data flow in stages:
+## 🚀 Overview
 
-mathematica
-Copy
-Edit
-📥 Collect ➜ 🔍 Extract ➜ 🧽 Clean ➜ 📦 Structure ➜ 🔡 Translate ➜ 🖼️ Annotate (optional)
-🔧 Features
-🖼️ Input: Scanned images, PDFs, and digital text
+This project demonstrates a basic **CRUD (Create, Read, Update, Delete)** operation using the Rails MVC framework. It's a perfect starting point for beginners to understand how to build a full-stack application using Ruby on Rails.
 
-🔠 OCR Extraction: Powered by Tesseract / Gemini / Qwen-VL
+---
 
-🧽 Cleaning: Text normalization & noise removal
+## 🎯 Features
 
-🧾 Structuring: Converts content into machine-readable JSON
+- 📝 Create, edit, and delete tasks
+- 📋 Mark tasks as complete or incomplete
+- 📆 View list of all tasks
+- ⚙️ RESTful routes and MVC architecture
+- 💾 SQLite as the default development database
 
-⠿ Braille Conversion: English & Hindi support via Liblouis
+---
 
-🖍️ Optional Annotation: Table/image tagging (future scope)
+## 📁 Project Structure
 
-🛠️ Pipeline Stages
-Stage	Description
-1️⃣ Collect	Ingest scanned files or scrape digital content
-2️⃣ Extract & Clean	OCR-based text recognition & cleanup
-3️⃣ Structure	Convert into logical sections (JSON format)
-4️⃣ Braille Translate	Convert to .brf Braille files
-5️⃣ Annotate (Opt.)	Add semantic tags for images/tables (TBD)
-
-🗂 Project Structure
-graphql
-Copy
-Edit
-braille-ai-pipeline/
-├── data/
-│   ├── input/               # Raw files (images, text, etc.)
-│   └── output/              # Processed results and Braille files
-├── src/
-│   ├── collect.py           # Data scraping & ingestion
-│   ├── extract_ocr.py       # OCR text extraction
-│   ├── clean_text.py        # Text preprocessing & normalization
-│   ├── structure_json.py    # Structuring as JSON
-│   ├── braille_translate.py # Braille file generation
-│   └── config.py            # Language & file path settings
-├── requirements.txt
-├── README.md
-└── LICENSE
-🧪 Sample I/O
-File Type	Name	Description
-🖼️ Input	page_001.jpeg	Scanned document
-✨ Cleaned	page_001.txt	Preprocessed text
-📦 JSON	page_001.json	Structured content
-⠿ Braille	page_001.brf	Final translated Braille file
-
-🚀 Getting Started
+```bash
+rails_todo_app/
+├── app/
+│   ├── controllers/      # Logic and routing (TasksController)
+│   ├── models/           # Task model (ActiveRecord)
+│   ├── views/            # Embedded Ruby (.erb) templates
+│   └── assets/           # CSS, JS, and images
+├── config/               # Routes, environment, and initializers
+├── db/                   # Migrations and schema
+├── public/               # Static files
+├── Gemfile               # Gem dependencies
+└── README.md             # Project overview
+💻 Getting Started
 1️⃣ Clone the Repository
 bash
 Copy
 Edit
-git clone https://github.com/jyothir-369/braille-ai-pipeline.git
-cd braille-ai-pipeline
-2️⃣ Install Requirements
+git clone https://github.com/jyothir-369/rails_todo_app.git
+cd rails_todo_app
+2️⃣ Install Dependencies
 bash
 Copy
 Edit
-pip install -r requirements.txt
-3️⃣ Run Pipeline Components
+bundle install
+3️⃣ Setup Database
 bash
 Copy
 Edit
-python src/collect.py
-python src/extract_ocr.py
-python src/clean_text.py
-python src/structure_json.py
-python src/braille_translate.py
-📜 License
-This project is licensed under the MIT License. See the LICENSE file for details.
+rails db:migrate
+4️⃣ Run the Server
+bash
+Copy
+Edit
+rails server
+Now, open your browser and visit: http://localhost:3000
 
-👤 Author
+🌐 Live Website
+Coming Soon...
+
+🔧 Tech Stack
+Frontend: HTML, SCSS, Embedded Ruby (ERB)
+
+Backend: Ruby on Rails
+
+Database: SQLite (default), PostgreSQL (optional)
+
+Server: Puma (default Rails server)
+
+📌 Future Improvements
+✅ Add user authentication
+
+🔁 Add due dates and reminders
+
+🔍 Search/filter functionality
+
+🌈 Improved UI with TailwindCSS or Bootstrap
+
+🧑‍💻 Author
 Jyothir Raghavalu Bhogi
 📧 jyothirraghavalu369@gmail.com
 🔗 LinkedIn
 🌐 Portfolio
 
-💬 Contact
-For questions, collaborations, or feature requests, feel free to email me or connect on LinkedIn.
+📜 License
+This project is licensed under the MIT License.
 
+💬 Contact
+For questions, feedback, or collaborations, feel free to reach out via email or LinkedIn.
+
+yaml
+Copy
+Edit
+
+---
+
+Let me know if you want:
+- a dark-mode version for GitHub README
+- badges (like build, license, etc.)
+- screenshots or GIF demo section  
+- deploy instructions (e.g., Heroku, Render, Fly.io)  
+- multilingual support or i18n setup for Rails
