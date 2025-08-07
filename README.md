@@ -1,34 +1,49 @@
-# 🧠 Braille AI Data Pipeline | Flickdone Assessment
+# 🧠 Braille AI Data Pipeline  
+**Convert Unstructured Text into Structured Braille Corpus**  
+![MIT License](https://img.shields.io/badge/license-MIT-green)  
+![Python](https://img.shields.io/badge/python-3.8%2B-blue)  
+![Status](https://img.shields.io/badge/status-active-brightgreen)
 
-This repository contains the code and demo for a data engineering pipeline designed to convert unstructured text data into a structured, AI-trainable dataset for Braille translation. This was developed as part of the assessment task for the **Data Engineer (AI Data Specialist)** role at **Flickdone**.
+> Developed as part of the **Data Engineer (AI Data Specialist)** assessment for **Flickdone**.
 
 ---
 
 ## 📌 Overview
 
-Flickdone develops AI systems to make digital and printed content accessible to the visually impaired. This project simulates a real-world data pipeline that:
+Flickdone develops AI systems that make digital and printed content accessible for the visually impaired.  
+This repository simulates a **real-world data engineering pipeline** to:
 
-- Collects unstructured text data (scanned pages, OCR-compatible images, or web content)
-- Extracts and cleans text using OCR tools (Tesseract & Vision-Language Models like Gemini or Qwen VL)
-- Structures the output into JSON with paragraph-aligned content and metadata
-- Translates text into Braille using open-source libraries like **Liblouis**
-- (Optional) Annotates visual elements like tables or diagrams
+- 🗃️ Collect unstructured textual content (scanned pages, images, or web)
+- 🔍 Extract and clean using OCR + Vision-Language Models (Tesseract, Gemini, Qwen-VL)
+- 📦 Structure into machine-readable JSON
+- 🔤 Translate into Braille using [Liblouis](http://www.liblouis.org/)
+- 🖼️ *(Optional)* Annotate tables, diagrams, and images
 
 ---
 
 ## 🛠️ Pipeline Stages
 
-### 1. **Collect**
-- Sources include scanned pages and online text content.
-- Sample data is stored in `data/`.
+<details>
+<summary><strong>1. Collect</strong></summary>
 
-### 2. **Extract and Clean**
-- Uses `Tesseract OCR` for basic extraction.
-- Advanced VLM support (e.g., Gemini/Qwen-VL) is pluggable.
-- Text is normalized and cleaned using custom Python scripts.
+- Accepts **scanned images**, **OCR-compatible files**, or **web content**
+- Store raw files in `data/input/`
 
-### 3. **Structure**
-- Converts extracted text into structured JSON format:
+</details>
+
+<details>
+<summary><strong>2. Extract & Clean</strong></summary>
+
+- Basic OCR with **Tesseract**
+- Pluggable advanced extraction via **Gemini** or **Qwen-VL**
+- Custom normalization scripts for text preprocessing
+
+</details>
+
+<details>
+<summary><strong>3. Structure</strong></summary>
+
+- JSON output format:
 
 ```json
 {
@@ -39,61 +54,58 @@ Flickdone develops AI systems to make digital and printed content accessible to 
     {"text": "Sample paragraph 2."}
   ]
 }
-4. Braille Translation
-Uses Liblouis to generate a parallel Braille corpus.
+</details> <details> <summary><strong>4. Braille Translation</strong></summary>
+Uses Liblouis to generate parallel .brf Braille files
 
-Supports both English and Hindi.
+Supports English and Hindi translations
 
-5. Optional Annotation
-Manual or AI-assisted annotation for images, tables, or diagrams.
+</details> <details> <summary><strong>5. Optional Annotation</strong></summary>
+Manual or AI-assisted tagging of images, tables, etc.
 
-Added as metadata to the structured JSON.
+Included as metadata in JSON
 
+</details>
 📽️ Demo Video
-Watch the demo showcasing the complete pipeline:
-🔗 Watch on Vimeo
+🎥 Watch the full pipeline demo on Vimeo (link placeholder)
 
 📁 Project Structure
 graphql
 Copy
 Edit
+braille-ai-pipeline/
 ├── data/
 │   ├── input/                # Raw unstructured files
 │   └── output/               # Structured and translated outputs
 ├── src/
-│   ├── collect.py            # Web scraping and document fetching
-│   ├── extract_ocr.py        # OCR extraction
-│   ├── clean_text.py         # Text normalization and preprocessing
-│   ├── structure_json.py     # JSON structuring
+│   ├── collect.py            # Document/web scraping
+│   ├── extract_ocr.py        # OCR and image text extraction
+│   ├── clean_text.py         # Normalization & preprocessing
+│   ├── structure_json.py     # JSON formatting
 │   ├── braille_translate.py  # Liblouis integration
-│   └── config.py             # Path and language configuration
+│   └── config.py             # Configs (paths, language)
 ├── README.md
-└── requirements.txt
-🧪 Sample Input/Output
-Input:
-Scanned page image (e.g., page_001.jpeg)
+├── requirements.txt
+└── LICENSE
+🧪 Sample I/O
+Type	File
+📄 Input	page_001.jpeg
+✨ Cleaned	page_001.txt
+📦 Structured	page_001.json
+⠿ Braille	page_001.brf
 
-Output:
-
-Cleaned text: page_001.txt
-
-JSON structured data: page_001.json
-
-Braille text: page_001.brf
-
-🚀 How to Run
-1. Clone the repository:
+🚀 Getting Started
+1. Clone the Repo
 bash
 Copy
 Edit
 git clone https://github.com/jyothir-369/braille-ai-pipeline.git
 cd braille-ai-pipeline
-2. Install dependencies:
+2. Install Dependencies
 bash
 Copy
 Edit
 pip install -r requirements.txt
-3. Run the pipeline:
+3. Run the Pipeline
 bash
 Copy
 Edit
@@ -102,29 +114,16 @@ python src/extract_ocr.py
 python src/clean_text.py
 python src/structure_json.py
 python src/braille_translate.py
-🧾 License
-This project is licensed under the MIT License. See the LICENSE file for details.
+📜 License
+This project is licensed under the MIT License.
+See the LICENSE file for details.
 
 👨‍💻 Author
 Jyothir Raghavalu Bhogi
-📧 Email: jyothirraghavalu369@gmail.com
-🔗 LinkedIn: linkedin.com/in/jyothir-raghavalu-bhogi-059500252
-🌐 Portfolio: https://jyothir-369.github.io/BJR/
+📧 jyothirraghavalu369@gmail.com
+🔗 LinkedIn
+🌐 Portfolio
 
 📬 Contact
-For questions or collaboration inquiries, feel free to reach out via email or LinkedIn.
-
-yaml
-Copy
-Edit
-
----
-
-Let me know if you'd like this automatically pushed to your GitHub repo or need a `.gitignore` or `requirements.txt` generated as well.
-
-
-
-
-
-
-
+For questions, ideas, or collaboration:
+👉 Drop an email or connect on LinkedIn.
